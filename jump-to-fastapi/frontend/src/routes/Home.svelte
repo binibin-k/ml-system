@@ -1,6 +1,7 @@
 <script>
     import fastapi from "../lib/api"
     import { link } from 'svelte-spa-router'
+    
     let question_list = []
 
     function get_question_list() {
@@ -8,6 +9,7 @@
             question_list = json
         })
     }
+    
     get_question_list()
 </script>
 
@@ -31,4 +33,5 @@
             {/each}
         </tbody>
     </table>
+    <a use:link href="/question-create" class="btn btn-primary">질문 등록하기</a>
 </div>

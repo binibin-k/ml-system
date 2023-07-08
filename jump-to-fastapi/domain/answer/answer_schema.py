@@ -20,4 +20,3 @@ class Answer(BaseModel): # 단 한 건에 대한 스키마
 
     class Config:
         orm_mode = True
-
